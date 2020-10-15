@@ -1,0 +1,53 @@
+10397  10/15/2020 16:11  cd docker
+10398  10/15/2020 16:12  docker build -t ypetit/test:es-7.9.0-demno-app-catalog .
+10399  10/15/2020 16:17  zip -r es-demo-app-catalog.zip technologies
+10400  10/15/2020 16:17  ll
+10401* 10/15/2020 16:17  docker push ypetit/test:es-7.9.0-demno-app-catalog
+10402  10/15/2020 16:19  docker run --rm -it --name tmp --entrypoint bash ypetit/test:es-7.9.0-demo-app-catalog
+10403  10/15/2020 16:20  docker run --rm -it --name tmp --entrypoint bash ypetit/test:es-7.9.0-demno-app-catalog
+10404* 10/15/2020 16:30  docker build -t ypetit/test:es-7.9.0-demo-app-catalog .
+10405* 10/15/2020 16:30  docker push ypetit/test:es-7.9.0-demo-app-catalog
+10406* 10/15/2020 16:37  docker build -t ypetit/test:es-7.9.0-demo-app-catalog .
+10407* 10/15/2020 16:38  docker push ypetit/test:es-7.9.0-demo-app-catalog
+10408* 10/15/2020 16:43  docker build -t ypetit/test:es-7.9.0-demo-app-catalog .
+10409* 10/15/2020 16:44  ll
+10410* 10/15/2020 16:44  chmod +x entrypoint.sh
+10411* 10/15/2020 16:44  ll
+10412* 10/15/2020 16:44  docker build -t ypetit/test:es-7.9.0-demo-app-catalog .
+10413* 10/15/2020 16:44  docker push ypetit/test:es-7.9.0-demo-app-catalog
+10414* 10/15/2020 16:50  docker build -t ypetit/test:es-7.9.0-demo-app-catalog .
+10415* 10/15/2020 16:51  docker push ypetit/test:es-7.9.0-demo-app-catalog
+10416  10/15/2020 16:51  ll
+10417  10/15/2020 16:51  zip -r es-demo-app-catalog2.zip technologies
+10418  10/15/2020 16:51  ll
+10419* 10/15/2020 17:01  docker build -t ypetit/test:es-7.9.0-demo-app-catalog-02 .
+10420* 10/15/2020 17:02  docker build --build-arg DOCKER_VERSION=7.6.0 -t ypetit/test:es-7.6.0-demo-app-catalog .
+10421  10/15/2020 17:09  zip -r es-demo-app-catalog3.zip technologies
+10422* 10/15/2020 17:11  docker push ypetit/test:es-7.6.0-demo-app-catalog
+10423  10/15/2020 17:14  docker build -t ypetit/test:es-7.9.0-demo-app-catalog-03 .
+10424  10/15/2020 17:15  ll
+10425  10/15/2020 17:15  cd docker 
+10426  10/15/2020 17:15  docker build -t ypetit/test:es-7.9.0-demo-app-catalog-03 .
+10427  10/15/2020 17:16  docker push ypetit/test:es-7.9.0-demno-app-catalog-02
+10428  10/15/2020 17:16  docker push ypetit/test:es-7.9.0-demo-app-catalog-02
+10429  10/15/2020 17:16  docker push ypetit/test:es-7.9.0-demo-app-catalog-03
+10430* 10/15/2020 17:18  cd ..
+10431* 10/15/2020 17:18  zip -r es-demo-app-catalog4.zip technologies
+10432  10/15/2020 17:22  docker build -t ypetit/test:es-7.9.0-demo-app-catalog-04 .
+10433  10/15/2020 17:22  docker push ypetit/test:es-7.9.0-demo-app-catalog-04
+10434  10/15/2020 17:23  docker build --build-arg DOCKER_VERSION=7.6.0 -t ypetit/test:es-7.6.0-demo-app-catalog-02 .
+10435  10/15/2020 17:23  docker push ypetit/test:es-7.6.0-demo-app-catalog-02
+10436  10/15/2020 17:23  cd ..
+10437  10/15/2020 17:24  zip -r es-demo-app-catalog5.zip technologies
+10438  10/15/2020 17:29  cd docker 
+10439  10/15/2020 17:29  docker push ypetit/test:es-7.9.0-demo-app-catalog-0
+10440  10/15/2020 17:29  docker build -t ypetit/test:es-7.9.0-demo-app-catalog-04 .
+10441  10/15/2020 17:29  docker push ypetit/test:es-7.9.0-demo-app-catalog-04
+10442  10/15/2020 17:32  docker build -t ypetit/test:es-7.9.0-demo-app-catalog-04 .
+10443  10/15/2020 17:32  docker push ypetit/test:es-7.9.0-demo-app-catalog-04
+10444  10/15/2020 17:42  cd ..
+10445  10/15/2020 17:42  git init 
+10446  10/15/2020 17:42  gst 
+10447  10/15/2020 17:43  git add . 
+10448  10/15/2020 17:43  git commit -m "initial commit"
+10449  10/15/2020 17:50  git remote add origin git@github.com:finalspy/saagie-demo-app-catalog.git
