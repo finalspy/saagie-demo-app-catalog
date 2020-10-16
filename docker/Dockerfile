@@ -1,4 +1,5 @@
 ARG DOCKER_VERSION=7.9.0
+
 FROM docker.elastic.co/elasticsearch/elasticsearch:$DOCKER_VERSION
 
 LABEL maintainer="Saagie"
@@ -9,16 +10,19 @@ RUN yum install -y epel-release && \
     yum install -y nginx && \
     yum clean all
 
-# Modify cong nginx
-COPY nginx.conf /etc/nginx/nginx.conf
-
 # Expose port
 EXPOSE 8200
 EXPOSE 8300
 
+# Modify cong nginx
+COPY resources/nginx.conf /etc/nginx/nginx.conf
+
 # Define entrypoint
-COPY entrypoint.sh /entrypoint.sh
+COPY resources/entrypoint.sh /entrypoint.sh
 
-ENV discovery.type single-node
+# Single Node config ENV VAR for ES
+# ENV discovery.type single-node only set for root not elasticsearch user and as it contains a  (dot) it's name is not bash rules compliant so use config file instead
+COPY resources/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
 
-ENTRYPOINT ["/entrypoint.sh"]
+# uses tini as entrypoint 
+ENTRYPOINT ["/tini", "/entrypoint.sh"]
